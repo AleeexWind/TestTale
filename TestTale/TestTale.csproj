@@ -8,13 +8,11 @@
 	<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
 	<WarningsAsErrors>1591</WarningsAsErrors>
 	<PackageId>TestTale</PackageId>
-	<Version>1.0.0</Version>
 	<Authors>Aleksey Luzanov</Authors>
 	<Company>Aleksey Luzanov</Company>
 	<Description>Make your tests as a tale</Description>
 	<PackageTags>test;unit test</PackageTags>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	<PackageOutputPath>C:\NuGetLocal</PackageOutputPath>
   	<RepositoryUrl>https://github.com/AleeexWind/TestTale</RepositoryUrl>
  	<RepositoryType>git</RepositoryType>
 
