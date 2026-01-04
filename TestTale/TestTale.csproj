@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
 	<ItemGroup>
-		<None Include="..\README.md" Pack="true" PackagePath="\">
-			<Link>README.md</Link>
-		</None>
+		<None Include="README.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
-
 </Project>
