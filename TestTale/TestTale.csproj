@@ -12,6 +12,7 @@
 	<Company>Aleksey Luzanov</Company>
 	<Description>Make your tests as a tale</Description>
 	<PackageTags>test;unit test</PackageTags>
+	<Version>1.0.0</Version>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   	<RepositoryUrl>https://github.com/AleeexWind/TestTale</RepositoryUrl>
  	<RepositoryType>git</RepositoryType>
