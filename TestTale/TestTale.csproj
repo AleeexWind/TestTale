@@ -30,5 +30,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+	<ItemGroup>
+		<None Include="..\README.md" Pack="true" PackagePath="\">
+			<Link>README.md</Link>
+		</None>
+	</ItemGroup>
 
 </Project>
