@@ -1,8 +1,9 @@
 name: Publish NuGet Package
 
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - 'v*'
   workflow_dispatch:
 
 jobs:
@@ -12,6 +13,14 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
+    - name: Extract Version from Tag
+      id: get_version
+      run: |
+        # Remove 'v' prefix from tag (v1.0.3 → 1.0.3)
+        VERSION="${GITHUB_REF#refs/tags/v}"
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        echo "Using version: $VERSION"
+        
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
@@ -26,9 +35,17 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
       
-    - name: Pack
-      run: dotnet pack --configuration Release --no-build --output nupkgs
+    - name: Pack with Version
+      run: |
+        dotnet pack \
+          --configuration Release \
+          --no-build \
+          --output nupkgs \
+          -p:Version=${{ steps.get_version.outputs.version }}
       
     - name: Push to NuGet.org
-      run: dotnet nuget push ./nupkgs/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
-      if: github.event_name == 'release'
+      run: |
+        dotnet nuget push ./nupkgs/*.nupkg \
+          --api-key ${{ secrets.NUGET_API_KEY }} \
+          --source https://api.nuget.org/v3/index.json \
+          --skip-duplicate
