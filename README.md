@@ -66,3 +66,6 @@ The second example tests the same functionality but all the details are not disc
     }
 ```
 I hope that it will be much more convinient to read the second example, because it explains step by step how the test is configured and what is you expect from passing the test. Another advantage is that this code can be understood not only by programmers but also by business people.
+
+More examples you can find in the link below:
+https://github.com/AleeexWind/TestTale.Examples/tree/master/ForecastTests
