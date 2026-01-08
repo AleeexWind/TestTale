@@ -12,7 +12,7 @@ namespace TestTale.Parameterless.Verifications
         /// <summary>
         /// <inheritdoc cref="Attempt{TSutDependencies, TSut, TResult}" path="//typeparam"/>
         /// </summary>
-        protected Attempt<TSutDependencies, TSut, TResult>? Attempt
+        protected Attempt<TSutDependencies, TSut, TResult> Attempt
         {
             get
             {
