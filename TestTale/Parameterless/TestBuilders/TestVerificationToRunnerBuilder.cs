@@ -1,4 +1,5 @@
 ﻿using TestTale.Common;
+using TestTale.Parameterless.Attempts;
 using TestTale.Parameterless.Verifications;
 
 namespace TestTale.Parameterless.TestBuilders
@@ -28,7 +29,7 @@ namespace TestTale.Parameterless.TestBuilders
         /// Register the verification
         /// </summary>
         /// <param name="verification">A class representing a verification</param>
-        /// <returns>The current instance of <see cref="TestRunner"/></returns>
+        /// <returns>The current instance of <see cref="TestVerificationToRunnerBuilder&lt;TSutDependencies, TSut, TResult&gt;"/></returns>
         public TestVerificationToRunnerBuilder<TSutDependencies, TSut, TResult> Then(Verification<TSutDependencies, TSut, TResult> verification)
         {
             return _testVerificationBuilder.Then(verification);

@@ -27,7 +27,7 @@ namespace TestTale.Parameterless.TestBuilders
         /// The method which binds an attempt to a verification
         /// </summary>
         /// <param name="verification">A class representing a verification</param>
-        /// <returns>The current instance of <see cref="TestRunner"/></returns>
+        /// <returns>The current instance of <see cref="TestVerificationToRunnerBuilder&lt;TSutDependencies, TSut, TResult&gt;"/></returns>
         public TestVerificationToRunnerBuilder<TSutDependencies, TSut, TResult> Then(Verification<TSutDependencies, TSut, TResult> verification)
         {
             verification.BindToTheAttempt(_attempt);

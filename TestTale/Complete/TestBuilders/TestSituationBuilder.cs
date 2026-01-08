@@ -26,7 +26,7 @@ namespace TestTale.Complete.TestBuilders
         /// <summary>
         /// Register that there are no situation
         /// </summary>
-        /// <returns>The current instance of <see cref="TestRunner"/></returns>
+        /// <returns>The current instance of <see cref="TestVerificationBuilder&lt;TSutDependencies, TSut, TParameters, TResult&gt;"/></returns>
         public TestVerificationBuilder<TSutDependencies, TSut, TParameters, TResult> WithNoSituation()
         {
             return _testVerificationBuilder;
@@ -35,7 +35,7 @@ namespace TestTale.Complete.TestBuilders
         /// Register the situation
         /// </summary>
         /// <param name="situation">A class representing a situation</param>
-        /// <returns>The current instance of <see cref="TestRunner"/></returns>
+        /// <returns>The current instance of <see cref="TestSituationToVerificationBuilder&lt;TSutDependencies, TSut, TParameters, TResult&gt;"/></returns>
         public TestSituationToVerificationBuilder<TSutDependencies, TSut, TParameters, TResult> WithSituation(Situation<TSutDependencies, TSut, TParameters, TResult> situation)
         {
             situation.BindToTheAttempt(_attempt);

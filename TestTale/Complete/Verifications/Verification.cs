@@ -13,7 +13,7 @@ namespace TestTale.Complete.Verifications
         /// <summary>
         /// <inheritdoc cref="Attempt{TSutDependencies, TSut, TParameters, TResult}" path="//typeparam"/>
         /// </summary>
-        protected Attempt<TSutDependencies, TSut, TParameters, TResult>? Attempt
+        protected Attempt<TSutDependencies, TSut, TParameters, TResult> Attempt
         {
             get
             {

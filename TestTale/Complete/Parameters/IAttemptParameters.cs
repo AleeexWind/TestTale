@@ -1,7 +1,7 @@
 ﻿namespace TestTale.Complete.Parameters
 {
     /// <summary>
-    /// Абстракция параметров попытки
+    /// Abstraction of the attempt parameters
     /// </summary>
     public interface IAttemptParameters
     {
