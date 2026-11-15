@@ -60,7 +60,7 @@ The second example tests the same functionality but all the details are not disc
             .Attempts(new GetForecast())
             .Using(new ForecastProviderDependencies())
             .WithAnyParameters()
-            .WithSituation(new WhenProvidedForecastIsNotNull())
+            .When(new WhenProvidedForecastIsNotNull())
             .Then(new SeeSuccessfulMetric())
             .RunAsync();
     }

@@ -35,10 +35,18 @@ namespace TestTale.Parameterless.TestBuilders
         /// </summary>
         /// <param name="situation">A class representing a situation</param>
         /// <returns>The current instance of <see cref="TestSituationToVerificationBuilder&lt;TSutDependencies, TSut, TResult&gt;"/></returns>
-        public TestSituationToVerificationBuilder<TSutDependencies, TSut, TResult> WithSituation(Situation<TSutDependencies, TSut, TResult> situation)
+        public TestSituationToVerificationBuilder<TSutDependencies, TSut, TResult> When(Situation<TSutDependencies, TSut, TResult> situation)
         {
             situation.BindToTheAttempt(_attempt);
             return new TestSituationToVerificationBuilder<TSutDependencies, TSut, TResult>(this, _testVerificationBuilder);
         }
+        /// <summary>
+        /// Register the situation
+        /// </summary>
+        /// <param name="situation">A class representing a situation</param>
+        /// <returns>The current instance of <see cref="TestSituationToVerificationBuilder&lt;TSutDependencies, TSut, TResult&gt;"/></returns>
+        [Obsolete("Use When(...) instead.")]
+        public TestSituationToVerificationBuilder<TSutDependencies, TSut, TResult> WithSituation(Situation<TSutDependencies, TSut, TResult> situation)
+            => When(situation);
     }
 }
