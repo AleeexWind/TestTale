@@ -30,10 +30,18 @@ namespace TestTale.Complete.TestBuilders
         /// </summary>
         /// <param name="situation">A class representing a situation</param>
         /// <returns>The current instance of <see cref="TestSituationToVerificationBuilder&lt;TSutDependencies, TSut, TParameters, TResult&gt;"/></returns>
-        public TestSituationToVerificationBuilder<TSutDependencies, TSut, TParameters, TResult> WithSituation(Situation<TSutDependencies, TSut, TParameters, TResult> situation)
+        public TestSituationToVerificationBuilder<TSutDependencies, TSut, TParameters, TResult> When(Situation<TSutDependencies, TSut, TParameters, TResult> situation)
         {
-            return _testSituationBuilder.WithSituation(situation);
+            return _testSituationBuilder.When(situation);
         }
+        /// <summary>
+        /// Register the situation
+        /// </summary>
+        /// <param name="situation">A class representing a situation</param>
+        /// <returns>The current instance of <see cref="TestSituationToVerificationBuilder&lt;TSutDependencies, TSut, TParameters, TResult&gt;"/></returns>
+        [Obsolete("Use When(...) instead.")]
+        public TestSituationToVerificationBuilder<TSutDependencies, TSut, TParameters, TResult> WithSituation(Situation<TSutDependencies, TSut, TParameters, TResult> situation)
+            => When(situation);
         /// <summary>
         /// Register the verification
         /// </summary>
